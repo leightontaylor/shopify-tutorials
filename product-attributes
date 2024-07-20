@@ -1,0 +1,12 @@
+Paste the following into Snippets > product-grid-item.liquid. It should be placed just after the closing "if" statement {% if product_description %} and before the closing </div> tag for the div with class "productitem--info". This is around line 384-385.
+
+<div class="productitem--description visible">
+	{{ product.metafields.custom.thumbnail_bullets | metafield_tag }}
+</div>
+
+
+Paste the following into Assets > theme.css.liquid.
+
+.productitem--description.visible {
+  display: block;
+}
