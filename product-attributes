@@ -10,3 +10,7 @@ Paste the following into Assets > theme.css.liquid.
 .productitem--description.visible {
   display: block;
 }
+.metafield-rich_text_field ul {
+  padding-inline-start: 1em;
+  margin-top: .75em;
+}
