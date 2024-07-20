@@ -1,0 +1,26 @@
+In Snippets > product-grid-item.liquid, find this line: {{ product_title }}. Replace it with the following:
+
+{% if product_title contains ' - ' %}
+	{{ product_title | split: ' - ' | first }}
+	<span class="product_subtitle">{{ product_title | split: ' - ' | last }}</span>
+{% else %}
+	{{ product_title }}
+{% endif %}
+
+In Sections > product.liquid, find this line: {{ product.title }}. Replace it with the following:
+
+{% if product.title contains ' - ' %}
+	{{ product.title | split: ' - ' | first }}
+	<span class="product_subtitle">{{ product.title | split: ' - ' | last }}</span>
+{% else %}
+	{{ product.title }}
+{% endif %}
+
+In Assets > theme.css.liquid, paste the following at the very bottom: 
+
+.product_subtitle {
+  font-size:80%;
+  font-weight: normal;
+  display: block;
+  margin-top: .5rem;
+}
