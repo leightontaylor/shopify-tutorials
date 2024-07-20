@@ -7,7 +7,7 @@ In Snippets > product-grid-item.liquid, find this line: {{ product_title }}. Rep
 	{{ product_title }}
 {% endif %}
 
-In Sections > product.liquid, find this line: {{ product.title }}. Replace it with the following:
+In Snippets > product.liquid, find this line: {{ product.title }}. Replace it with the following:
 
 {% if product.title contains ' - ' %}
 	{{ product.title | split: ' - ' | first }}
